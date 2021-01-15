@@ -22,7 +22,7 @@ function setup(){
 
     ground = Bodies.rectangle(200,390,200,20,ground_option);
     World.add(world, ground);
-    ball=Bodies.rectangle(200,50,20,20,ball_option)
+    ball=Bodies.circle(200,50,20,ball_option)
 
     World.add(world,ball);
     
@@ -34,5 +34,6 @@ function draw(){
     Engine.update(engine);
     rectMode(CENTER);
     rect(ground.position.x,ground.position.y,200,20);
-    rect(ball.position.x,ball.position.y,20,20)
+    ellipseMode(RADIUS);
+    ellipse(ball.position.x, ball.position.y, 20, 20);
 }
